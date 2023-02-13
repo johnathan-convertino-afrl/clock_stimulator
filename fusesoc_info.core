@@ -1,0 +1,26 @@
+CAPI=2:
+
+name: AFRL:simulation:clock_stimulator:1.0.0
+description: Verilog axis file I/O testing core.
+
+filesets:
+  src:
+    files:
+      - src/tm_stim_clk.v
+    file_type: verilogSource
+  
+  tb:
+    files:
+      - tb/tb_clk.v
+    file_type: verilogSource
+    
+targets:
+  default: &default
+    filesets: [src]
+  
+  sim:
+    <<: *default
+    default_tool: icarus
+    filesets_append: [tb]
+    toplevel: tb_clk
+    
