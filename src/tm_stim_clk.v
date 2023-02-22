@@ -34,7 +34,8 @@
 module clk_stimulus #(
     parameter CLOCKS = 2,           /**< # of clocks */
     parameter CLOCK_BASE = 1000000, /**< clock time base mhz */
-    parameter CLOCK_INC = 100,      /**< clock time diff mhz */
+    parameter CLOCK_INC = 100,      /**< time diff for other clocks, only used for async mode */
+    parameter CLOCK_ASYNC = 0,      /**< used time diff to generate async clocks (1), 0 is sync clock */
     parameter RESETS = 2,           /**< # of resets */
     parameter RESET_BASE = 200,     /**< time to stay in reset */
     parameter RESET_INC = 100       /**< time diff for other resets */
@@ -68,8 +69,13 @@ module clk_stimulus #(
         // toggle indexed clock
         clkv[clk_index] <= ~clkv[clk_index];
         
-        // wait for a certian amount of time, increase based on index * increment
-        #((lp_PERIOD+(CLOCK_INC*clk_index))/2);
+        if(CLOCK_ASYNC != 0) begin
+          // wait for a certian amount of time, increase based on index * increment
+          #((lp_PERIOD+(CLOCK_INC*clk_index))/2);
+        end else begin
+          // wait for a certian amount of time, these are multples of the clock to keep them in sync
+          #((lp_PERIOD*(clk_index+1))/2);
+        end
       end
     end
   endgenerate

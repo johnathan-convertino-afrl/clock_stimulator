@@ -24,7 +24,8 @@ The module outputs a vector based on the number requested.
 
 * CLOCKS : 2 : # of clocks
 * CLOCK_BASE : 1000000 : clock time base mhz
-* CLOCK_INC : 100 : clock time diff mhz
+* CLOCK_INC : 100 : clock time diff mhz, only for async mode.
+* CLOCK_ASYNC : 0 : if set to anything other than 0, clock will be async vs sync. 
 * RESETS : 2 : # of resets
 * RESET_BASE : 200 : time to stay in reset
 * RESET_INC : 100 : time diff for other resets
