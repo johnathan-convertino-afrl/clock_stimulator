@@ -35,17 +35,17 @@ module tb_clk;
   localparam USER_WIDTH = 1;
   localparam DEST_WIDTH = 1;
   
-  localparam CLK_PERIOD = 500;
-  localparam RST_PERIOD = 1000;
+  localparam NUM_CLKS = 2;
+  localparam NUM_RSTS = 2;
   
-  wire                      tb_stim_clk;
-  wire                      tb_stim_rstn;
+  wire  [NUM_CLKS-1:0]  tb_stim_clk;
+  wire  [NUM_RSTS-1:0]  tb_stim_rstn;
   
   clk_stimulus #(
-    .CLOCKS(1), // # of clocks
+    .CLOCKS(NUM_CLKS), // # of clocks
     .CLOCK_BASE(1000000), // clock time base mhz
     .CLOCK_INC(1000), // clock time diff mhz
-    .RESETS(1), // # of resets
+    .RESETS(NUM_RSTS), // # of resets
     .RESET_BASE(2000), // time to stay in reset
     .RESET_INC(100) // time diff for other resets
   ) clk_stim (
@@ -61,6 +61,13 @@ module tb_clk;
     $dumpfile ("tb_clk.vcd");
     $dumpvars (0, tb_clk);
     #1;
+  end
+  
+  //copy pasta, no way to set runtime... this works in vivado as well.
+  initial begin
+    #1_000_000; // Wait a long time in simulation units (adjust as needed).
+    $display("END SIMULATION");
+    $finish;
   end
   
 endmodule

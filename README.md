@@ -1,5 +1,5 @@
 # AFRL Clock Stimulator for AXIS
-## AXIS Clock Stimulator modules
+### AXIS Clock Stimulator modules
 ---
 
    author: Jay Convertino   
@@ -11,8 +11,6 @@
    license: MIT   
    
 ---
-
-![rtl_img](./rtl.png)
 
 ### IP USAGE
 #### INSTRUCTIONS
@@ -43,3 +41,9 @@ The module outputs a vector based on the number requested.
 
 * fusesoc_info.core created.
 * Simulation uses icarus to run data through the core.
+
+#### TARGETS
+
+* RUN WITH: (fusesoc run --target=sim VENDER:CORE:NAME:VERSION)
+  - default (for IP integration builds)
+  - sim
