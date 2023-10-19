@@ -16,10 +16,12 @@ filesets:
     
 targets:
   default: &default
+    description: Default file set.
     filesets: [src]
   
   sim:
     <<: *default
+    description: Default for sim intergration.
     default_tool: icarus
     filesets_append: [tb]
     toplevel: tb_clk
