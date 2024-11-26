@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("SystemVerilogModule:tb_clk","tb_clk");NDSummary.OnSummaryLoaded("SystemVerilogModule:tb_clk",[["SystemVerilog","SystemVerilog"]],[["Modules","Module"]],[[18,0,0,"tb_clk"]]);

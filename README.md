@@ -1,5 +1,8 @@
 # AFRL Clock Stimulator for AXIS
 ### AXIS Clock Stimulator modules
+
+![image](docs/manual/img/AFRL.png)
+
 ---
 
    author: Jay Convertino   
@@ -19,13 +22,13 @@
 #### Previous
   - none
 
-### IP USAGE
-#### INSTRUCTIONS
+### DOCUMENTATION
+  For detailed usage information, please navigate to one of the following sources. They are the same, just in a different format.
 
-This modules creates multiple clocks and multiple negative or positive resets.  
-The module outputs a vector based on the number requested.
+  - [clock_stimulator.pdf](docs/manual/clock_stimulator.pdf)
+  - [github page](https://johnathan-convertino-afrl.github.io/clock_stimulator/)
 
-#### PARAMETERS
+### PARAMETERS
 
 * CLOCKS : 2 : # of clocks
 * CLOCK_BASE : 1000000 : clock time base mhz
@@ -44,12 +47,12 @@ The module outputs a vector based on the number requested.
 
 * tb_clk.v
 
-### fusesoc
+### FUSESOC
 
 * fusesoc_info.core created.
 * Simulation uses icarus to run data through the core.
 
-#### TARGETS
+#### Targets
 
 * RUN WITH: (fusesoc run --target=sim VENDER:CORE:NAME:VERSION)
   - default (for IP integration builds)

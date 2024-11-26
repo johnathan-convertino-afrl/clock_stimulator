@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("clk",["Module"],[["clk_stim",,[[,,,,0,"File2:tb_clk.v:clk_stim","SystemVerilogModule:clk_stim"]]],["clk_stimulus",,[[,,,,0,"File:tm_stim_clk.v:clk_stimulus","SystemVerilogModule:clk_stimulus"]]]]);

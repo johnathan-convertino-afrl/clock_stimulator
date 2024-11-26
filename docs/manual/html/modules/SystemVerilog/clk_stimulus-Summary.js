@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("SystemVerilogModule:clk_stimulus","clk_stimulus");NDSummary.OnSummaryLoaded("SystemVerilogModule:clk_stimulus",[["SystemVerilog","SystemVerilog"]],[["Modules","Module"]],[[9,0,0,"clk_stimulus"]]);

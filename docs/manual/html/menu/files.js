@@ -1,0 +1,1 @@
+﻿NDMenu.OnSectionLoaded("files.js",[[2,"clock_stimulator_source","File:",[[1,"tm_stim_clk.v"]]],[2,"clock_stimulator_testbench","File2:",[[1,"tb_clk.v"]]]]);
