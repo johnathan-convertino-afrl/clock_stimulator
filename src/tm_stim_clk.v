@@ -96,7 +96,7 @@ module clk_stimulus #(
           #((lp_PERIOD+(CLOCK_INC*clk_index))/2);
         end else begin
           // wait for a certian amount of time, these are multples of the clock to keep them in sync
-          #((lp_PERIOD*(clk_index+2))/2);
+          #((lp_PERIOD*( clk_index ? clk_index * 2 : 1))/2);
         end
       end
     end
