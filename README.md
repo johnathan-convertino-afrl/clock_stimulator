@@ -1,5 +1,6 @@
 # AFRL Clock Stimulator for AXIS
 ### AXIS Clock Stimulator modules
+---
 
 ![image](docs/manual/img/AFRL.png)
 
